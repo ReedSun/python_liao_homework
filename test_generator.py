@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 
+#杨辉三角
+#把杨辉三角的每一行看做一个list，试写一个generator，不断输出下一行的list：
 def triangles():
     n=[1]
     while True:
