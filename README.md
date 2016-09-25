@@ -1,0 +1,2 @@
+# python_liao_homework
+这个repositiory是用来存放我在学习廖雪峰的python教程中的练习
