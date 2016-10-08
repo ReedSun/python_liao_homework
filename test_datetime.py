@@ -1,5 +1,7 @@
 # -*- coding:utf-8 -*-
 
+# 假设你获取了用户输入的日期和时间如2015-1-21 9:01:30，以及一个时区信息如UTC+5:00，均是str，请编写一个函数将其转换为timestamp
+
 import re
 from datetime import datetime, timezone, timedelta
 
@@ -10,7 +12,7 @@ def to_timestamp(dt_str, tz_str):
     sun_timezone = int(re_sun.match(tz_str).group(2))  #提取时区
     sun_timezone = timezone(timedelta(hours=sun_timezone))  #创建时区
     sun_datatime_timezone = sun_datatime.replace(tzinfo=sun_timezone)  #强制设置timezone
-    print(sun_datatime_timezone.timestamp())
+    print(sun_datatime_timezone.timestamp())   #把datetime转化为timestamp
     return(sun_datatime_timezone.timestamp())
 
 # 测试:
